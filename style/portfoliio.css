@@ -10,7 +10,7 @@
     margin-top: 50px;
     text-align: center;
     text-transform: uppercase;
-        letter-spacing: 4px;
+    letter-spacing: 4px;
         line-height: 23px;
 }
 
@@ -24,7 +24,7 @@
     width: 90%;
     margin: auto;
     height: 100px;
-        margin-top: 50px;
+    margin-top: 50px;
 }
 
 #progress-bar-container ul {
@@ -34,14 +34,14 @@
     z-index: 9999;
     position: absolute;
     width: 100%;
-        margin-top: -40px;
+    margin-top: -40px;
 }
 
 #progress-bar-container li:before {
     content: " ";
     display: block;
     margin: auto;
-        width: 30px;
+    width: 30px;
         height: 30px;
         border-radius: 50%;
         border: solid 2px #aaa;
@@ -130,14 +130,14 @@
 }
 
 #progress-content-section {
-    width: 90%;
+    width: 100%;
     margin: auto;
     background: #f3f3f3;
     border-radius: 4px;
 }
 
 #progress-content-section .section-content {
-    padding: 30px 40px;
+    padding: 30px 30px;
     text-align: center;
 }
 
@@ -152,7 +152,7 @@
 #progress-content-section .section-content p {
     font-size: 13px;
     line-height: 1.8em;
-    color: #777;
+    color: var(--white-secondary);
     text-align: left;
 }
 
@@ -179,14 +179,16 @@
             opacity: 1;
         }
 }
+
 /* Card style  */
 
 .grid {
     font-family: 'Inter', Arial;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 240px);
-    grid-gap: 32px;
+    display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px;
     position: relative;
     z-index: 1;
 }
@@ -200,7 +202,7 @@ grid:before {
 }
 
 .card {
-    --background-color: #18181b;
+    --background-color: #2b343a;
     --text-color: #a1a1aa;
     --card-background-color: rgba(255, 255, 255, .015);
     --card-border-color: rgba(255, 255, 255, 0.1);
@@ -237,7 +239,7 @@ grid:before {
     position: relative;
     transition: box-shadow 0.25s;
     height: 300px;
-    width: 230px;
+    width: 245px;
 }
 
 .card::before {
@@ -574,4 +576,95 @@ grid:before {
 .card:hover .background .line.line-3:before,
 .card:hover .background .line.line-3:after {
     transition-delay: 0.3s;
+}
+/* Certifications styling */
+
+
+ol.gradient-list>li,
+ol.gradient-list>li::before {
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ol.gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+}
+
+ol.gradient-list>li {
+    background: var(--dark-secondary);
+    color: var(--white);
+    border-radius: 0 1rem 1rem 1rem;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+ol.gradient-list>li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: var(--primary);
+}
+
+ol.gradient-list>li::before,
+ol.gradient-list>li::after {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+    border-radius: 1.5rem 1.5rem 0 1.5rem;
+    content: '';
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+}
+
+ol.gradient-list>li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: flex-end;
+    padding: 0.50em 0.50em;
+    z-index: 1;
+}
+
+/* ol.gradient-list>li:nth-child(10n+1):before {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+}
+
+ol.gradient-list>li:nth-child(10n+2):before {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+}
+
+ol.gradient-list>li:nth-child(10n+3):before {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+}
+
+ol.gradient-list>li:nth-child(10n+4):before {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+}
+
+ol.gradient-list>li:nth-child(10n+5):before {
+    background: linear-gradient(135deg, #3590d2 0%, #ff8bb3 100%);
+} */
+
+ol.gradient-list>li+li {
+    margin-top: 2rem;
 }
