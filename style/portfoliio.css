@@ -11,7 +11,7 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
-        line-height: 23px;
+    line-height: 23px;
 }
 
 #portfolio .process-wrapper {
@@ -42,7 +42,7 @@
     display: block;
     margin: auto;
     width: 30px;
-        height: 30px;
+    height: 30px;
         border-radius: 50%;
         border: solid 2px #aaa;
         transition: all ease 0.3s;
@@ -186,7 +186,7 @@
     font-family: 'Inter', Arial;
     overflow: hidden;
     display: flex;
-        justify-content: center;
+    justify-content: center;
         flex-wrap: wrap;
         gap: 32px;
     position: relative;
@@ -577,6 +577,7 @@ grid:before {
 .card:hover .background .line.line-3:after {
     transition-delay: 0.3s;
 }
+
 /* Certifications styling */
 
 
