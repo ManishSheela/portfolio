@@ -1,24 +1,23 @@
-
-// Active menu Select       ////////////
-const list = document.querySelectorAll(".list");
-
-function active() {
-  list.forEach((item) => item.classList.remove("active"));
-  this.classList.add("active");
-}
-list.forEach((item) => item.addEventListener("click", active));
-
 jQuery(document).ready(function () {
-  // setTimeout(loader,3000);
-  //    function loader() {
-  //      $('.loader--text').hide();
-  //      $('.cycle').addClass("animate__animated animate__backOutRight");
-  //      $('.main').addClass("animate__animated animate__backInLeft");
-  //   }
-  // setTimeout(lottie,3500);
-  // function lottie(){
-  //     $('.cycle-loader').hide();
-  // }
+  setTimeout(loader, 3000);
+  function loader() {
+    $(".loader--text").hide();
+    $(".cycle").addClass("animate__animated animate__backOutRight");
+    $(".main").addClass("animate__animated animate__zoomIn");
+  }
+  setTimeout(lottie, 3500);
+  function lottie() {
+    $(".cycle-loader").hide();
+  }
+
+  // Active menu Select       ////////////
+  const list = document.querySelectorAll(".list");
+
+  function active() {
+    list.forEach((item) => item.classList.remove("active"));
+    this.classList.add("active");
+  }
+  list.forEach((item) => item.addEventListener("click", active));
 
   // Share button functionality
   $(".share-button").click(function () {
