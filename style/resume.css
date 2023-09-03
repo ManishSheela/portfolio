@@ -193,10 +193,14 @@ ul.interest li .icon ion-icon {
 .rightSide {
   padding-left: 40px;
 }
-.rightSide p {
+.rightSide p,
+ol {
   font-size: 14px;
   text-align: justify;
   color:rgba(255,255,255,0.5);
+}
+.rightSide ol li span {
+  color: #ff8bb3;
 }
 .about-skills .box {
   position: relative;
@@ -234,6 +238,5 @@ ul.interest li .icon ion-icon {
 }
 .about-project .text {
   padding-top: 5px;
-  
 }
 
